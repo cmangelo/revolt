@@ -1,0 +1,8 @@
+<i class="fa fa-bars hamburger" (click)="toggleSidebar()"></i>
+<div class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen}">
+  <div class="icons">
+    <div *ngFor="let link of links">
+      <i [ngClass]="link.icon"></i>
+    </div>
+  </div>
+</div>
