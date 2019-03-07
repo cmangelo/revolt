@@ -1,0 +1,49 @@
+@import "../../../variables.less";
+
+.bg-white {
+    background-color: white;
+    //height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .box {
+        color: @primary-text;
+        //border: 2px solid black;
+        padding: 20px;
+        width: 90%;
+        display:flex;
+        justify-content: center;
+    }
+
+
+table {
+    th {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    tbody {
+        color: @secondary-text;
+        font-size: 24px;
+
+        td {
+            &:nth-of-type(2) {
+                text-align: right;
+                padding-left: 42px;
+
+
+            }
+        }
+    }
+}
+                @media screen and (max-width: 380px) {
+                    td {
+                        font-size: 19px;
+                    }
+                }
+
+
+}
