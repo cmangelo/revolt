@@ -1,44 +1,33 @@
 @import "../../../variables.less";
 
-.bg-white {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    .box {
-        color: @primary-text;
-        padding: 20px;
-        width: 90%;
-        display:flex;
-        justify-content: center;
-    }
+h2 {
+    text-align: center;
+}
 
-    table {
-        th {
-            font-size: 36px;
-            text-align: center;
-        }
+table {
 
-        tbody {
-            color: @secondary-text;
-            font-size: 24px;
+    tbody {
+        color: @secondary-text;
+        font-size: 24px;
 
-            td {
-                &:nth-of-type(2) {
-                    text-align: right;
-                    padding-left: 42px;
-
-
-                }
+        td {
+            &:nth-of-type(2) {
+                text-align: right;
+                padding-left: 42px;
             }
         }
     }
+}
 
-    @media screen and (max-width: 380px) {
-        td {
-            font-size: 19px;
-        }
+@media screen and (max-width: 420px) {
+    td {
+        font-size: 21px;
     }
 }
+
+@media screen and (max-width: 380px) {
+    td {
+        font-size: 16px;
+    }
+}
+

@@ -1,9 +1,54 @@
-.image {
-    background-image: url('../assets/images/stock-beer.jpg');
-    height: 100vh;
-    background-size: cover;
-    
-    .main-content {
-        padding-top: 50px;
+.main-content {
+    //padding-top: 80px;
+
+    .image {
+        background-image: url('../assets/images/stock-beer.jpg');
+        height: 100vh;
+        background-size: cover;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        .border-box {
+            border: 3px solid white;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 82px;
+            width: 80%;
+            max-width: 600px;
+            padding: 25px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            text-rendering: optimizeLegibility;
+            -webkit-box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.87); 
+            box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.87);
+
+            &.retro-shadow {
+                letter-spacing: .05em;
+                text-shadow: 
+                  4px 4px 0px #2c2c2c, 
+                  7px 7px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+    .border-box {
+        font-size: 70px !important;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .border-box {
+        font-size: 48px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .border-box {
+        font-size: 37px !important;
     }
 }

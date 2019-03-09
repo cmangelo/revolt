@@ -1,19 +1,15 @@
-<div class="bg-white">
-    <div class="container box">
-      <table>
-        <thead>
-          <tr>
-            <th colspan="2">
-              Weekly Hours
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let day of dailyHours">
-            <td>{{day.day}}</td>
-            <td>{{day.openTime}} - {{day.closeTime}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<h2>
+    Weekly Hours
+</h2>
+
+<table>
+  <tbody>
+    <tr *ngFor="let day of dailyHours">
+      <td>{{day.day}}</td>
+      <td>
+        <span *ngIf="day.closed">Closed</span>
+        <span *ngIf="!day.closed">{{day.openTime}} - {{day.closeTime}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

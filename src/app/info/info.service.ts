@@ -10,13 +10,13 @@ export class InfoService {
 
   getHours(): Array<DailyHours> {
     return new Array(
-      <DailyHours>{ day: 'Monday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Tuesday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Wednesday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Thursday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Friday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Saturday', openTime: '12pm', closeTime: '8pm' },
-      <DailyHours>{ day: 'Sunday', openTime: '12pm', closeTime: '8pm' },
+      <DailyHours>{ day: 'Monday', closed: true },
+      <DailyHours>{ day: 'Tuesday', closed: true },
+      <DailyHours>{ day: 'Wednesday', openTime: '3:30pm', closeTime: '10pm' },
+      <DailyHours>{ day: 'Thursday', openTime: '3:30pm', closeTime: '10pm' },
+      <DailyHours>{ day: 'Friday', openTime: '3:30pm', closeTime: '10pm' },
+      <DailyHours>{ day: 'Saturday', openTime: '1pm', closeTime: '10pm' },
+      <DailyHours>{ day: 'Sunday', openTime: '1pm', closeTime: '8pm' },
     );
   }
 }

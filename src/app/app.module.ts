@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ContactModule } from './contact/contact.module';
 import { InfoModule } from './info/info.module';
+import { FeedsModule } from './feeds/feeds.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfoModule } from './info/info.module';
     AppRoutingModule,
     CoreModule,
     ContactModule,
-    InfoModule
+    InfoModule,
+    FeedsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
