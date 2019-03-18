@@ -1,0 +1,13 @@
+<div class="container box">
+  <div class="title">Our Beers</div>
+  <div class="list">
+    <div *ngFor="let beer of beers" class="beer">
+      <div class="name">{{beer.name}}</div>
+      <div class="desc">
+        <span>{{beer.abv}}% ABV</span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>{{beer.ibu}} IBU</span>
+      </div>
+    </div>
+  </div>
+</div>

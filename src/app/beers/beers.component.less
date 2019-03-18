@@ -1,0 +1,74 @@
+@import '../../variables.less';
+
+.box {
+    color: @primary-text;
+    padding: 95px 0px 75px 0px;
+    // width: 90%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+
+    .title {
+        font-size: 70px;
+        font-weight: 600;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .list {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px 15px;
+        max-width: 750px;
+        text-align: center;
+        
+        .beer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+
+            .name {
+                font-size: 40px;
+            }
+
+            .desc {
+                font-size: 22px;
+                font-weight: lighter;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .name {
+        font-size: 32px !important;
+    }
+
+    .desc {
+        font-size: 20px !important;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .beer {
+        flex-direction: column;
+        justify-items: flex-start;
+    }
+
+    .title {
+        font-size: 55px !important;
+    }
+    
+    .name {
+        font-size: 28px !important;
+    }
+
+    .desc {
+        font-size: 18px !important;
+    }
+}

@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { ContactModule } from './contact/contact.module';
 import { InfoModule } from './info/info.module';
 import { FeedsModule } from './feeds/feeds.module';
+import { BeersModule } from './beers/beers.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FeedsModule } from './feeds/feeds.module';
     CoreModule,
     ContactModule,
     InfoModule,
-    FeedsModule
+    FeedsModule,
+    BeersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
