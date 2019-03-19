@@ -14,7 +14,15 @@ export class BeersComponent implements OnInit {
   constructor(private readonly beerService: BeersService) { }
 
   ngOnInit() {
-    this.beers = this.beerService.getBeers();
+    this.getBeers();
+  }
+
+  getBeers() {
+    this.beerService.getBeers()
+      .subscribe((beers: Array<Beer>) => {
+        this.beers = beers;
+        console.log(beers);
+      });
   }
 
 }
