@@ -9,7 +9,7 @@ const json = '.json';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiHelperService {
+export class ApiService {
 
   constructor(private readonly httpClient: HttpClient) { }
 
@@ -18,6 +18,9 @@ export class ApiHelperService {
       .pipe(map((data: any) => this.dataToList<T>(data)));
   }
 
+  post<T>(url: string, data: any): Observable<T> {
+    return this.httpClient.post<T>(url, data);
+  }
 
   dataToList<T>(data: any): Array<T> {
     const list = new Array<T>();

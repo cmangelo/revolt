@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Beer } from './models/beer.interface';
-import { ApiHelperService } from '../core/api/api-helper.service';
+import { ApiService } from '../core/api/api-helper.service';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class BeersService {
 
-  constructor(private api: ApiHelperService) { }
+  constructor(private api: ApiService) { }
 
 
   getBeers(): Observable<Array<Beer>> {

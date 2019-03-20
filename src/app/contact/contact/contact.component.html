@@ -1,0 +1,13 @@
+<div class="email-form container">
+    <form (ngSubmit)="registerEmail()" #emailForm="ngForm">
+        <div class="form-group">
+            <!-- <label for="email">Email Address</label> -->
+            <!-- <input type="email" id="email" name="email" class="form-control" [ngModel]="email" required  #name="ngModel"> -->
+            <input type="email" name="email" id="email" class="form-control" required [(ngModel)]="email" #name="ngModel" email>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger"> 
+                Enter a valid email address
+            </div>
+            <button type="submit" class="btn btn-success" (click)="registerEmail()">Submit</button>
+        </div>
+    </form>
+</div>
