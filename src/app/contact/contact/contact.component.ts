@@ -9,7 +9,10 @@ import { ContactService } from '../contact.service';
 })
 export class ContactComponent implements OnInit {
   email: string;
-  success: boolean;
+  registeredEmail: string;
+  showSuccess: boolean;
+  showNoSuccess: boolean;
+  showInvalidEmail: boolean;
 
   constructor(private readonly service: ContactService) { }
 
@@ -17,21 +20,38 @@ export class ContactComponent implements OnInit {
 
   }
 
-  registerEmail() {
+  formSubmit() {
+    this.clearMessages();
     if (!this.validateEmail(this.email)) {
-      console.log('invalid email');
+      this.showInvalidEmail = true;
+      return;
     }
-
-    this.service.registerEmail().subscribe((data) => this.success = data);
-
+    this.registerEmail(this.email);
   }
 
-  validateEmail(email: string) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return true;
-    }
-    alert('You have entered an invalid email address!')
-    return false;
+  private registerEmail(email: string): void {
+    this.service.registerEmail(email).subscribe((success: boolean) => {
+      if (success) {
+        this.showSuccess = true;
+        this.registeredEmail = this.email;
+        this.clearForm();
+      } else {
+        this.showNoSuccess = true;
+      }
+    });
   }
 
+  private clearMessages(): void {
+    this.showInvalidEmail = false;
+    this.showNoSuccess = false;
+    this.showSuccess = false;
+  }
+
+  private clearForm(): void {
+    this.email = '';
+  }
+
+  private validateEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 }

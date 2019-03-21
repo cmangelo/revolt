@@ -9,7 +9,7 @@ export class ContactService {
 
   constructor(private readonly api: ApiService) { }
 
-  registerEmail(): Observable<boolean> {
-    return of(true);
+  registerEmail(email: string): Observable<boolean> {
+    return of(false);
   }
 }
