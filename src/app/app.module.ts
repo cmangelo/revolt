@@ -9,6 +9,7 @@ import { ContactModule } from './contact/contact.module';
 import { InfoModule } from './info/info.module';
 import { FeedsModule } from './feeds/feeds.module';
 import { BeersModule } from './beers/beers.module';
+import { LocationModule } from './location/location.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BeersModule } from './beers/beers.module';
     ContactModule,
     InfoModule,
     FeedsModule,
-    BeersModule
+    BeersModule,
+    LocationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

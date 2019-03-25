@@ -1,8 +1,17 @@
 <div class="email-form container">
+    <div class="desc">Join Our Email List</div>
+
     <form (ngSubmit)="registerEmail()" #emailForm="ngForm">
         <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" name="email" id="email" class="form-control" required [(ngModel)]="email" #name="ngModel" email>
+            <input type="email" 
+                   name="email" 
+                   id="email" 
+                   class="form-control" 
+                   required 
+                   [(ngModel)]="email" 
+                   #name="ngModel" 
+                   email
+                   placeholder="Email Address">
             <div *ngIf="showInvalidEmail" class="alert alert-danger"> 
                 Please enter a valid email address
             </div>
