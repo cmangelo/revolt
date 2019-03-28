@@ -1,0 +1,51 @@
+@import "../../variables.less";
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 120px;
+}
+
+.media-title { 
+    text-align: center;
+    font-size: 45px;
+    padding-top: 80px;
+
+    a {
+        cursor: pointer;
+        color: @primary-text !important;
+
+        i {
+            &.fa-facebook-square {
+                color: @facebook-logo;
+            }
+
+            &.fa-instagram {
+                color: @instagram-logo;        
+            }
+
+            &.fa-yelp {
+                color: @yelp-logo;
+            }
+        }
+
+        span {
+            font-weight: lighter;
+        }
+    }
+}
+
+.fb-container {
+    padding-top: 15px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 480px) { 
+    .media-title { 
+        text-align: center;
+        font-size: 30px;
+    }
+}

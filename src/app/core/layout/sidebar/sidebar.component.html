@@ -2,7 +2,7 @@
 <div class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen}">
   <div class="icons">
     <div *ngFor="let link of links">
-      <i class="clickable" [ngClass]="link.icon"></i>
+      <a href="#beers"><i class="clickable" [ngClass]="link.icon"></i></a> 
     </div>
   </div>
 </div>
