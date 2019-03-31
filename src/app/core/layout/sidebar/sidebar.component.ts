@@ -18,11 +18,11 @@ export class SidebarComponent implements OnInit {
 
   getLinks(): Array<Link> {
     return new Array(
-      <Link>{ name: 'Beers', icon: 'fa fa-beer' },
-      <Link>{ name: 'Info', icon: 'fa fa-info-circle' },
-      <Link>{ name: 'Location', icon: 'fa fa-map-marker' },
-      <Link>{ name: 'Contact', icon: 'fa fa-envelope-o' },
-      <Link>{ name: 'Feeds', icon: 'fa fa-newspaper-o' }
+      <Link>{ name: '#info', icon: 'fa fa-home' },
+      <Link>{ name: '#beers', icon: 'fa fa-beer' },
+      <Link>{ name: '#location', icon: 'fa fa-map-marker' },
+      <Link>{ name: '#feeds', icon: 'fa fa-newspaper-o' },
+      <Link>{ name: '#contact', icon: 'fa fa-envelope-o' }
     );
   }
 
