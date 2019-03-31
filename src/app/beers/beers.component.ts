@@ -21,7 +21,6 @@ export class BeersComponent implements OnInit {
     this.beerService.getBeers()
       .subscribe((beers: Array<Beer>) => {
         this.beers = beers;
-        console.log(beers);
       });
   }
 
