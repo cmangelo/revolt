@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Publish to github pages
+
+`ng build --prod --output-path docs --base-href /<project_name>/`
+
+When the build is complete, make a copy of docs/index.html and name it docs/404.html.
+
+Commit your changes and push.
